@@ -11,7 +11,7 @@ node
      environment
      {
     	registry = "docker_hub_account/ kittu02021994/docker-test"
-    	registryCredential = 'dockerhub'
+    	registryCredential = 'kittu02021994'
      }
 	 stage ('Docker Image Push')
 	 {
