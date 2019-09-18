@@ -6,7 +6,7 @@ node
 	 stage ('Build Image')
      {
          def mvnHome = '/usr/share/maven3'
-         def dockerImage = sh "sudo ${mvnHome}/bin/mvn -f /var/lib/jenkins/workspace/Jenkins-docker/docker/docker-java-maven/gs-spring-boot-docker-master/complete/pom.xml package dockerfile:build"
+         def dockerImage = sh "sudo ${mvnHome}/bin/mvn -f /var/lib/jenkins/workspace/java_docker_1@script/docker-java-maven/gs-spring-boot-docker-master/complete/pom.xml package dockerfile:build"
      }
 	 stage ('Docker Image Push')
 	 {
