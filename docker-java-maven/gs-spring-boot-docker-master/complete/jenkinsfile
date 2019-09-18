@@ -10,12 +10,12 @@ node
      }
      environment
      {
-    	registry = "docker_hub_account/ kittu02021994/docker-test"
-    	registryCredential = 'kittu02021994'
+    	registry = "kittu02021994/docker-test"
+    	registryCredential = 'docker-hub-credentials'
      }
 	 stage ('Docker Image Push')
 	 {
-       docker.withRegistry ('https://registry.hub.docker.com' , 'docker-hub-credentials')
+       docker.withRegistry ('', 'registryCredential')
 	   {
 			dockerImage.push("gs-spring-boot-docker")
 	   }
